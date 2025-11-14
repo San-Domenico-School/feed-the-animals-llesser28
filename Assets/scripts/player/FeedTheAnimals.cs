@@ -45,14 +45,17 @@ public class FeedTheAnimals : MonoBehaviour
         {
             if (ctx.started)
             {
-                
+                zPressed = true;
+                zHoldCoroutine = StartCoroutine(ZHoldCheck());
             }
 
             if (ctx.canceled)
             {
-                if (!zHeld)
+                zPressed = false;
+                if (zHoldCoroutine != null)
                 {
-                    SelectFood("z");
+                    StopCoroutine(zHoldCoroutine);
+                    zHoldCoroutine = null;
                 }
 
                 if (!zHeld)

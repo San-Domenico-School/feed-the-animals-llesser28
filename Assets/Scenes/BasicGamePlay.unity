@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f43d7f3a8184f02b4b0fbd1b88e5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
-  playerSpeed: 30
+  playerSpeed: 10
 --- !u!114 &1259344389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,6 +1042,9 @@ MonoBehaviour:
   - {fileID: 4179084700347874263, guid: 9f063c5e5835cbd4b8dc54a6c0b45db4, type: 3}
   - {fileID: 3880822729609494365, guid: 86ace54fc73f1421bb21235ec6bfbd0f, type: 3}
   - {fileID: 835354414956440832, guid: 36c1cfc138f4144fb9d219f227d8de44, type: 3}
+  playerMovement: {fileID: 1259344386}
+  playerSpeed: 60
+  holdThreshold: 0.2
 --- !u!82 &1259344390
 AudioSource:
   m_ObjectHideFlags: 0
