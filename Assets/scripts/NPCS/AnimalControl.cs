@@ -6,6 +6,9 @@ public class AnimalControl : MonoBehaviour
     [SerializeField] private float playerspeed;
     [SerializeField] GameObject fooditeats;
     private bool notHungry;
+    public float GetPlayerSpeed() => playerspeed;
+    public void SetPlayerSpeed(float value) => playerspeed = value;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

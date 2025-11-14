@@ -8,8 +8,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    
-    [SerializeField] private float playerSpeed;
+   [SerializeField] public float playerSpeed;
     private float moveDirection;
     private float centerToEdge;
     
@@ -30,8 +29,17 @@ public class PlayerMovementController : MonoBehaviour
         DeterminesPlayerDirection(ctx.ReadValue<Vector2>());
     }
 
+    public float GetPlayerSpeed()
+    {
+        return playerSpeed;
+    }
 
-    
+    public void SetPlayerSpeed(float newSpeed)
+    {
+        playerSpeed = newSpeed;
+    }
+
+
     private void DeterminesPlayerDirection(Vector2 value)
     {
         moveDirection = value.x;
